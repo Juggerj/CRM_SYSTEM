@@ -1,7 +1,14 @@
+/.idea/
+/CRM_SYSTEM/settings_local.*
+/CRM_SYSTEM/settings.*
+*.pyc
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
 
 # C extensions
 *.so
