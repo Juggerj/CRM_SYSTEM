@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <script async src="{% static 'js/Main.js' %}" type="text/javascript"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet/less" type="text/css" href="{% static 'css/styles.less' %}" />
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js" type="text/javascript"></script>
+    <title></title>
+</head>
+<body>
+    <div class="deal">
+        <p> Дата создания </p>
+        <p> Источник </p>
+        <p> Стадия </p>
+        <p> Менеджер </p>
+        <p> Покупатель </p>
+    </div>
+    {% for item in deals %}
+        <div class="deal">
+            <p>{{ item.date_open }}</p>
+            <p>{{ item.source.name }}</p>
+            <p>{{ item.deal_stage.stage }}</p>
+            <p>{{ item.manager.last_name }} {{ item.manager.first_name }}</p>
+            <p>{{ item.customer.name }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>
